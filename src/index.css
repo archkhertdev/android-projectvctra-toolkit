@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -50,44 +51,6 @@
 
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
 }
 
 @layer base {
@@ -96,6 +59,70 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-terminal-background text-terminal-green font-mono antialiased;
+    background-image: 
+      radial-gradient(rgba(0, 255, 0, 0.05) 1px, transparent 1px),
+      radial-gradient(rgba(0, 255, 0, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+  }
+}
+
+@layer components {
+  .terminal-window {
+    @apply bg-terminal-window border border-terminal-border rounded-md overflow-hidden shadow-lg;
+    position: relative;
+  }
+
+  .terminal-header {
+    @apply bg-terminal-border px-4 py-2 flex items-center;
+    border-bottom: 1px solid #333;
+  }
+
+  .terminal-dot {
+    @apply h-3 w-3 rounded-full mx-1;
+  }
+
+  .terminal-body {
+    @apply p-4 text-terminal-text;
+  }
+
+  .terminal-prompt::before {
+    content: "$ ";
+    @apply text-terminal-green;
+  }
+
+  .terminal-code {
+    @apply bg-black/30 px-2 py-1 rounded text-terminal-neonGreen;
+  }
+
+  .typing-container {
+    display: inline-block;
+  }
+
+  .typing-text {
+    @apply overflow-hidden whitespace-nowrap border-r-2 border-terminal-green;
+    animation: typing 3.5s steps(40, end), blink .75s step-end infinite;
+  }
+
+  .scanline {
+    @apply absolute inset-0 pointer-events-none opacity-10 z-10;
+    background: linear-gradient(to bottom, transparent, rgba(0, 255, 0, 0.2), transparent);
+    animation: scanline 8s linear infinite;
+  }
+
+  .screen-flicker {
+    @apply absolute inset-0 opacity-5 pointer-events-none;
+    background: rgba(57, 255, 20, 0.03);
+    animation: flicker 0.3s infinite;
+  }
+  
+  .installation-step {
+    @apply my-2 relative pl-8;
+  }
+  
+  .installation-step::before {
+    content: ">";
+    @apply absolute left-0 text-terminal-neonGreen;
   }
 }
