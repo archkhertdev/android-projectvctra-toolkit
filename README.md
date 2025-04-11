@@ -83,5 +83,6 @@ python vctratoolkit2.py
 
 
 
-> Note: Make sure Python is installed. For the full setup guide, visit:
-android-cyber-terminal-toolkit.lovable.app
+**Note: Make sure Python is installed. For the full setup guide, visit:**
+https://android-cyber-terminal-toolkit.lovable.app/
+
