@@ -1,73 +1,87 @@
-# Welcome to your Lovable project
+## PROJECT VCTRA TOOLKIT
 
-## Project info
+**PROJECT VCTRA TOOLKIT** is a powerful multi-tool for cybersecurity testing, network diagnostics, and website vulnerability analysis—all designed to run directly on Termux for Android, with no root required.
 
-**URL**: https://lovable.dev/projects/9cd39fbe-8cd4-4f07-8cea-73e37ef75653
+> Author: vctraontop
+Platform: Android (Termux)
+Interface: Command Line (CLI)
+Compatibility: Non-rooted devices
+Website (Full Setup Guide): android-cyber-terminal-toolkit.lovable.app
 
-## How can I edit this code?
 
-There are several ways of editing your application.
 
-**Use Lovable**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/9cd39fbe-8cd4-4f07-8cea-73e37ef75653) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+Features
 
-**Use your preferred IDE**
+1. **SMTP Email Spammer**
+Send rapid, customizable email blasts for testing or research purposes.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+2. **Website Vulnerability Tester**
+Perform various vulnerability checks including:
 
-Follow these steps:
+HTTP headers
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+SQL Injection (SQLi)
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Cross-site Scripting (XSS)
 
-# Step 3: Install the necessary dependencies.
-npm i
+Admin panel finder
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Form detection
 
-**Edit a file directly in GitHub**
+robots.txt status
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
 
-**Use GitHub Codespaces**
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+3. **IP Address Tracker**
+Get detailed geolocation data of any IP address including:
 
-## What technologies are used for this project?
+Country, region, city
 
-This project is built with:
+Latitude/Longitude
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+ISP details
 
-## How can I deploy this project?
+Google Maps link
 
-Simply open [Lovable](https://lovable.dev/projects/9cd39fbe-8cd4-4f07-8cea-73e37ef75653) and click on Share -> Publish.
 
-## Can I connect a custom domain to my Lovable project?
 
-Yes it is!
+4. **Internet Speed Tester**
+Check real-time download and upload speed with latency for network diagnostics.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+5. **Directory Brute Forcer**
+Discover hidden directories and files on a website using dictionary brute-forcing.
+
+
+6. **Port Scanner**
+Scan for open ports on a given target to assess available services (non-root method).
+
+
+7. **JavaScript Link Crawler**
+Crawl and extract JavaScript-based links from a web page for deeper recon.
+
+
+
+
+---
+
+**How to Run on Termux**
+
+1. Clone the repository or copy the script to Termux:
+
+git clone <your-repo-url>
+cd vctratoolkit2
+
+
+2. Run the toolkit:
+
+python vctratoolkit2.py
+
+
+
+> Note: Make sure Python is installed. For the full setup guide, visit:
+android-cyber-terminal-toolkit.lovable.app
